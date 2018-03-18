@@ -1,0 +1,10 @@
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\bin\Debug\FileFinder.exe.config
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\bin\Debug\FileFinder.exe
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\bin\Debug\FileFinder.pdb
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.csprojResolveAssemblyReference.cache
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.searchFileForm.resources
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.Properties.Resources.resources
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.csproj.GenerateResource.Cache
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.csproj.CoreCompileInputs.cache
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.exe
+C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.pdb
