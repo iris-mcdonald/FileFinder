@@ -13,3 +13,18 @@
 3/20/2018 9:57:59 AM File path not Found  Exception Msg: Could not find a part of the path 'C:\Users\CC5 STUDENT\Documents\clevelandcodes'.
 3/20/2018 9:58:04 AM No Files Found Matching Path: C:\Users\CC5 STUDENT\Documents\clevelandcodes5 with file extension: (i.e. .XML, .TXT, .JSON, .CONFIG) 
 3/20/2018 9:58:21 AM No Files Found containing text: fresh figs on Path: C:\Users\CC5 STUDENT\Documents\clevelandcodes5 File extension: .txt
+3/20/2018 10:30:02 AM FileFinder Process Started
+3/20/2018 10:30:11 AM No Files Found Matching Path: C:\Users\CC5 STUDENT\ with file extension: .txt 
+3/20/2018 10:30:34 AM No Files Found containing text: figs on Path: C:\Users\CC5 STUDENT\Documents\clevelandcodes5 File extension: .txt
+3/20/2018 10:31:11 AM Clear Button Pressed; Form Cleared
+3/20/2018 10:31:13 AM No Files Found Matching Path: C:\Users\CC5 STUDENT\ with file extension: (i.e. .XML, .TXT, .JSON, .CONFIG) 
+3/20/2018 10:31:32 AM File path not Found  Exception Msg: Could not find a part of the path 'C:\Users\CC5 STUDENT\cl'.
+3/20/2018 10:32:56 AM File path not Found  Exception Msg: Could not find a part of the path 'C:\Users\CC5 STUDENT\clevelandcodes5'.
+3/20/2018 10:34:00 AM No Files Found Matching Path: c:\ with file extension: .txt 
+3/20/2018 10:34:04 AM Clear Button Pressed; Form Cleared
+3/20/2018 10:34:14 AM No Files Found Matching Path: C:\Users\CC5 STUDENT\ with file extension: .txt 
+3/20/2018 10:35:36 AM File Finder Process Ended
+3/20/2018 10:46:39 AM FileFinder Process Started
+3/20/2018 10:46:50 AM No Files Found Matching Path: C:\Users\CC5 STUDENT\ with file extension: .txt 
+3/20/2018 10:47:11 AM Clear Button Pressed; Form Cleared
+3/20/2018 10:48:21 AM File path not Found  Exception Msg: Could not find a part of the path 'C:\Users\CC5 STUDENT\Document'.

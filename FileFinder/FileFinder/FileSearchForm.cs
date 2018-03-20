@@ -19,7 +19,7 @@ namespace FileFinder
                 string searchDirectory = searchPath.Text;
                 string searchFileExt = fileExtension.Text;
                 string searchString = searchFile.Text;
-                textBox1.Text = "";
+                resultsBox1.Text = "";
 
                 bool inputValid = validateUserInput(searchDirectory, searchFileExt, searchString);
                 if (inputValid)
@@ -32,7 +32,7 @@ namespace FileFinder
                         string logMsg = ($"No Files Found Matching Path: { searchDirectory}" +
                              $" with file extension: {searchFileExt} ");
                         WriteLog(logMsg);
-                        textBox1.Text = logMsg;
+                        resultsBox1.Text = logMsg;
                     }
                     else
                     {
@@ -43,7 +43,7 @@ namespace FileFinder
                             if (foundMatch)
                             {
                                 ++filesFound;
-                                textBox1.AppendText(fileName + Environment.NewLine);
+                                resultsBox1.AppendText(fileName + Environment.NewLine);
                             }
                         }
                         //if no files were found containing the search string, write log message;
@@ -53,7 +53,7 @@ namespace FileFinder
                                 searchFile.Text + " on Path: " + searchDirectory +
                                 " File extension: " + searchFileExt;
                             WriteLog(logMsg);
-                            textBox1.Text = logMsg;
+                            resultsBox1.Text = logMsg;
                         }
                     }
                 }
@@ -132,7 +132,7 @@ namespace FileFinder
             searchPath.Text = "C:\\Users\\CC5 STUDENT\\";
             searchFile.Text = " ";
             fileExtension.Text = "(i.e. .XML, .TXT, .JSON, .CONFIG)";
-            textBox1.Text = " ";
+            resultsBox1.Text = " ";
             
         }
 

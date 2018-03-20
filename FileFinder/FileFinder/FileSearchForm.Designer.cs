@@ -38,7 +38,7 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.fileList = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.resultsBox1 = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -127,15 +127,15 @@
             this.fileList.Size = new System.Drawing.Size(0, 22);
             this.fileList.TabIndex = 9;
             // 
-            // textBox1
+            // resultsBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 322);
-            this.textBox1.MinimumSize = new System.Drawing.Size(200, 200);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(608, 242);
-            this.textBox1.TabIndex = 10;
+            this.resultsBox1.Location = new System.Drawing.Point(58, 322);
+            this.resultsBox1.MinimumSize = new System.Drawing.Size(200, 200);
+            this.resultsBox1.Multiline = true;
+            this.resultsBox1.Name = "resultsBox1";
+            this.resultsBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.resultsBox1.Size = new System.Drawing.Size(608, 242);
+            this.resultsBox1.TabIndex = 10;
             // 
             // errorProvider1
             // 
@@ -146,7 +146,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 605);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.resultsBox1);
             this.Controls.Add(this.fileList);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.searchButton);
@@ -176,7 +176,7 @@
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TextBox fileList;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox resultsBox1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
