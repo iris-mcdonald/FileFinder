@@ -7,4 +7,3 @@ C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.csp
 C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.csproj.CoreCompileInputs.cache
 C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.exe
 C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.pdb
-C:\Users\CC5 STUDENT\source\repos\FileFinder\FileFinder\obj\Debug\FileFinder.csprojResolveAssemblyReference.cache

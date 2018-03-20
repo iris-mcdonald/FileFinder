@@ -40,6 +40,7 @@
             this.fileList = new System.Windows.Forms.TextBox();
             this.resultsBox1 = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.fileExtDesc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,6 @@
             this.fileExtension.Size = new System.Drawing.Size(228, 22);
             this.fileExtension.TabIndex = 0;
             this.fileExtension.Tag = "Enter a file extension:";
-            this.fileExtension.Text = "(i.e. .XML, .TXT, .JSON, .CONFIG)";
             // 
             // label1
             // 
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 171);
+            this.label2.Location = new System.Drawing.Point(77, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(158, 17);
             this.label2.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             // searchFile
             // 
-            this.searchFile.Location = new System.Drawing.Point(247, 168);
+            this.searchFile.Location = new System.Drawing.Point(247, 123);
             this.searchFile.MaxLength = 50;
             this.searchFile.Name = "searchFile";
             this.searchFile.Size = new System.Drawing.Size(238, 22);
@@ -82,17 +82,17 @@
             // 
             // searchPath
             // 
-            this.searchPath.Location = new System.Drawing.Point(247, 99);
+            this.searchPath.Location = new System.Drawing.Point(247, 186);
             this.searchPath.MaxLength = 75;
             this.searchPath.Name = "searchPath";
             this.searchPath.Size = new System.Drawing.Size(318, 22);
             this.searchPath.TabIndex = 4;
-            this.searchPath.Text = "C:\\Users\\CC5 STUDENT\\";
+            this.searchPath.Text = "C:\\";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 110);
+            this.label3.Location = new System.Drawing.Point(77, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 17);
             this.label3.TabIndex = 5;
@@ -101,9 +101,9 @@
             // searchButton
             // 
             this.searchButton.AccessibleDescription = " ";
-            this.searchButton.Location = new System.Drawing.Point(247, 274);
+            this.searchButton.Location = new System.Drawing.Point(247, 257);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.Size = new System.Drawing.Size(108, 40);
             this.searchButton.TabIndex = 7;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(372, 274);
+            this.clearButton.Location = new System.Drawing.Point(417, 257);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.Size = new System.Drawing.Size(106, 40);
             this.clearButton.TabIndex = 8;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
@@ -141,11 +141,21 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // fileExtDesc
+            // 
+            this.fileExtDesc.AutoSize = true;
+            this.fileExtDesc.Location = new System.Drawing.Point(91, 87);
+            this.fileExtDesc.Name = "fileExtDesc";
+            this.fileExtDesc.Size = new System.Drawing.Size(106, 17);
+            this.fileExtDesc.TabIndex = 13;
+            this.fileExtDesc.Text = "(.txt, .xml, .json)";
+            // 
             // searchFileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 605);
+            this.Controls.Add(this.fileExtDesc);
             this.Controls.Add(this.resultsBox1);
             this.Controls.Add(this.fileList);
             this.Controls.Add(this.clearButton);
@@ -158,7 +168,8 @@
             this.Controls.Add(this.fileExtension);
             this.Name = "searchFileForm";
             this.Text = "File Search";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.button1);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.onExit);
+            this.Load += new System.EventHandler(this.searchFileForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,6 +189,7 @@
         private System.Windows.Forms.TextBox fileList;
         private System.Windows.Forms.TextBox resultsBox1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label fileExtDesc;
     }
 }
 

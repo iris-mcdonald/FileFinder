@@ -25,13 +25,15 @@ namespace FileFinder
                 if (inputValid)
                 {
                     string searchFiles = "*" + fileExtension.Text;
-                    string[] fileResults = Directory.GetFiles(searchDirectory, searchFiles);
-
+                    //string[] fileResults = Directory.GetFiles(searchDirectory, searchFiles);
+                    //added logic to search directories and all subdirectories:
+                    string[] fileResults = Directory.GetFiles
+                                (searchDirectory, searchFiles, SearchOption.AllDirectories);
                     if (fileResults.Count() == 0)
                     {
                         string logMsg = ($"No Files Found Matching Path: { searchDirectory}" +
                              $" with file extension: {searchFileExt} ");
-                        WriteLog(logMsg);
+                        writeLog(logMsg);
                         resultsBox1.Text = logMsg;
                     }
                     else
@@ -52,7 +54,7 @@ namespace FileFinder
                             string logMsg = "No Files Found containing text: " + 
                                 searchFile.Text + " on Path: " + searchDirectory +
                                 " File extension: " + searchFileExt;
-                            WriteLog(logMsg);
+                            writeLog(logMsg);
                             resultsBox1.Text = logMsg;
                         }
                     }
@@ -62,7 +64,7 @@ namespace FileFinder
             {
                 MessageBox.Show("Error: " + ex.Message);
                 string logMsg = ($"File path not Found  Exception Msg: {ex.Message}");
-                WriteLog(logMsg);
+                writeLog(logMsg);
                 
 
             }
@@ -70,11 +72,11 @@ namespace FileFinder
             {
                 MessageBox.Show("Error: " + ex.Message);
                 string logMsg = ($"Unexpected error:   Exception Msg: {ex.Message}");
-                WriteLog(logMsg);
+                writeLog(logMsg);
             }
         }
 
-        public void WriteLog(string logMsg)
+        public void writeLog(string logMsg)
         {
             FileStream logFile = new FileStream("Log.txt", FileMode.Append, FileAccess.Write);
             StreamWriter swLog = new StreamWriter(logFile);
@@ -128,22 +130,22 @@ namespace FileFinder
         private void clearButton_Click(object sender, EventArgs e)
         {
             string logMsg = ("Clear Button Pressed; Form Cleared");
-            WriteLog(logMsg);
-            searchPath.Text = "C:\\Users\\CC5 STUDENT\\";
-            searchFile.Text = " ";
-            fileExtension.Text = "(i.e. .XML, .TXT, .JSON, .CONFIG)";
-            resultsBox1.Text = " ";
+            writeLog(logMsg);
+            searchPath.Text = "C:\\";
+            searchFile.Text = "";
+            fileExtension.Text = "";
+            resultsBox1.Text = "";
             
         }
 
         //I attached a button1(which doesn't appear on the form
         //to the form event section "form close" to get this code generated
         //It gets invoked when the user presses X to exit
-        private void button1(object sender, FormClosedEventArgs e)
-        {
-            string logMsg = ("File Finder Process Ended");
-            WriteLog(logMsg);
-        }
+        //private void button1(object sender, FormClosedEventArgs e)
+        //{
+        //    string logMsg = ("File Finder Process Ended");
+        ////    writeLog(logMsg);
+       // }
 
         private void useerFileExt_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -153,6 +155,19 @@ namespace FileFinder
         private void searchFile_TextChanged(object sender, EventArgs e)
         {
         
+        }
+
+        private void searchFileForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        //I attached an event named onExit(which doesn't appear on the form
+        //to the form event section "form close" to get this code generated
+        //It gets invoked when the user presses X to exit
+        private void onExit(object sender, FormClosedEventArgs e)
+        {
+            string logMsg = ("File Finder Process Ended");
+            writeLog(logMsg);
         }
     }
 }
