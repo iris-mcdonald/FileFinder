@@ -12,46 +12,57 @@ namespace FileFinder
             InitializeComponent();
         }
 
-        public void WriteLog (string logMsg)
-        {
-            FileStream logFile = new FileStream("Log.txt", FileMode.Append, FileAccess.Write);
-            StreamWriter swLog = new StreamWriter(logFile);
-            DateTime now = DateTime.Now;
-            swLog.WriteLine($"{now} {logMsg}");
-                swLog.Close();
-        }
-
         private void searchButton_Click(object sender, EventArgs e)
         {
             try
             {
                 string searchDirectory = searchPath.Text;
-                string searchFileName = searchFile.Text;
                 string searchFileExt = fileExtension.Text;
-                string searchFiles = "*" + searchFileName + "*" + searchFileExt;
-                string[] fileResults = Directory.GetFiles(searchDirectory, searchFiles);
-                if (fileResults.Count() == 0)
+                string searchString = searchFile.Text;
+
+                bool inputValid = validateUserInput(searchDirectory, searchFileExt, searchString);
+                if (inputValid)
                 {
-                    string logMsg = "No Files Found Matching Search Specified";
-                    WriteLog(logMsg);
-                    textBox1.Text = "No Files Found Matching Search Specified";
-                }
-                else
-                {
-                    foreach (string fileName in fileResults)
+                    string searchFiles = "*" + fileExtension.Text;
+                    string[] fileResults = Directory.GetFiles(searchDirectory, searchFiles);
+
+                    if (fileResults.Count() == 0)
                     {
-                        //Console.WriteLine(fileName);
-                        textBox1.AppendText(fileName + Environment.NewLine);
+                        string logMsg = ($"No Files Found Matching Path: { searchDirectory}" +
+                             $" with file extension: {searchFileExt} ");
+                        WriteLog(logMsg);
+                        textBox1.Text = logMsg;
+                    }
+                    else
+                    {
+                        int filesFound = 0;
+                        foreach (string fileName in fileResults)
+                        {
+                            bool foundMatch = searchFileText(fileName, searchString);
+                            if (foundMatch)
+                            {
+                                ++filesFound;
+                                textBox1.AppendText(fileName + Environment.NewLine);
+                            }
+                        }
+                        //if no files were found containing the search string, write log message;
+                        if (filesFound == 0)
+                        {
+                            string logMsg = "No Files Found containing text: " + 
+                                searchFile.Text + " on Path: " + searchDirectory +
+                                " File extension: " + searchFileExt;
+                            WriteLog(logMsg);
+                            textBox1.Text = logMsg;
+                        }
                     }
                 }
             }
             catch (DirectoryNotFoundException ex)
             {
-                MessageBox.Show("No Files Found", "File Search",
-                MessageBoxButtons.OK, MessageBoxIcon.Error); 
-                //Console.WriteLine(ex.Message);
-                string logMsg = ($"File not Found  Exception Msg: {ex.Message}");
-                WriteLog(logMsg);  
+                MessageBox.Show("Invalid Path", "File Search",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string logMsg = ($"File path not Found  Exception Msg: {ex.Message}");
+                WriteLog(logMsg);
             }
             catch (Exception ex)
             {
@@ -59,6 +70,57 @@ namespace FileFinder
                 MessageBox.Show("Unexpected Error", "File Search",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void WriteLog(string logMsg)
+        {
+            FileStream logFile = new FileStream("Log.txt", FileMode.Append, FileAccess.Write);
+            StreamWriter swLog = new StreamWriter(logFile);
+            DateTime now = DateTime.Now;
+            swLog.WriteLine($"{now} {logMsg}");
+            swLog.Close();
+        }
+
+        private bool validateUserInput(string searchDirectory, string searchFileExt, string searchString)
+        {
+            bool inputValid = true;
+            if (searchDirectory == "")
+                {
+                    searchPath.Text = "Enter a Path to Search";
+                    inputValid = false;
+                }
+            if (searchFileExt == "")
+               {
+                   fileExtension.Text = "Enter a File Extension";
+                   inputValid = false;
+               }
+            if (searchString == "")
+               {
+                   searchFile.Text = "Enter Search Text";
+                   inputValid = false;
+               }
+            return inputValid;
+        }
+
+
+        private bool searchFileText(string fileName, string searchString)
+        {
+            string searchLine;
+            bool foundMatch = false;
+            FileStream aFile = new FileStream(fileName, FileMode.Open);
+            StreamReader sr = new StreamReader(aFile);
+            
+            while (!sr.EndOfStream)
+            {
+                searchLine = sr.ReadLine();
+                if (searchLine.ToUpper().Contains(searchString.ToUpper()))
+                {
+                    foundMatch = true;
+                    break;
+                }
+            }
+            sr.Close();
+            return foundMatch;
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -80,6 +142,15 @@ namespace FileFinder
             string logMsg = ("File Finder Process Ended");
             WriteLog(logMsg);
         }
-                
+
+        private void useerFileExt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void searchFile_TextChanged(object sender, EventArgs e)
+        {
+        
+        }
     }
 }

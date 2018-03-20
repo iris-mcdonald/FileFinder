@@ -45,7 +45,7 @@
             // 
             // fileExtension
             // 
-            this.fileExtension.Location = new System.Drawing.Point(247, 65);
+            this.fileExtension.Location = new System.Drawing.Point(247, 67);
             this.fileExtension.MaxLength = 10;
             this.fileExtension.Name = "fileExtension";
             this.fileExtension.Size = new System.Drawing.Size(228, 22);
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 127);
+            this.label2.Location = new System.Drawing.Point(77, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(158, 17);
             this.label2.TabIndex = 2;
@@ -73,15 +73,16 @@
             // 
             // searchFile
             // 
-            this.searchFile.Location = new System.Drawing.Point(247, 127);
+            this.searchFile.Location = new System.Drawing.Point(247, 168);
             this.searchFile.MaxLength = 50;
             this.searchFile.Name = "searchFile";
             this.searchFile.Size = new System.Drawing.Size(238, 22);
             this.searchFile.TabIndex = 3;
+            this.searchFile.TextChanged += new System.EventHandler(this.searchFile_TextChanged);
             // 
             // searchPath
             // 
-            this.searchPath.Location = new System.Drawing.Point(247, 186);
+            this.searchPath.Location = new System.Drawing.Point(247, 99);
             this.searchPath.MaxLength = 75;
             this.searchPath.Name = "searchPath";
             this.searchPath.Size = new System.Drawing.Size(318, 22);
@@ -91,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 186);
+            this.label3.Location = new System.Drawing.Point(77, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 17);
             this.label3.TabIndex = 5;
