@@ -19,6 +19,7 @@ namespace FileFinder
                 string searchDirectory = searchPath.Text;
                 string searchFileExt = fileExtension.Text;
                 string searchString = searchFile.Text;
+                textBox1.Text = "";
 
                 bool inputValid = validateUserInput(searchDirectory, searchFileExt, searchString);
                 if (inputValid)
@@ -59,16 +60,17 @@ namespace FileFinder
             }
             catch (DirectoryNotFoundException ex)
             {
-                MessageBox.Show("Invalid Path", "File Search",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message);
                 string logMsg = ($"File path not Found  Exception Msg: {ex.Message}");
                 WriteLog(logMsg);
+                
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                MessageBox.Show("Unexpected Error", "File Search",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message);
+                string logMsg = ($"Unexpected error:   Exception Msg: {ex.Message}");
+                WriteLog(logMsg);
             }
         }
 

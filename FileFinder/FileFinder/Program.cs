@@ -20,8 +20,7 @@ namespace FileFinder
                 DateTime now = DateTime.Now;
                 swLog.WriteLine($"{now} FileFinder Process Started");
                 swLog.Close();
-
-
+                
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new searchFileForm());
