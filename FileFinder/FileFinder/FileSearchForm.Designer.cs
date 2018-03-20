@@ -46,61 +46,68 @@
             // 
             // fileExtension
             // 
-            this.fileExtension.Location = new System.Drawing.Point(247, 67);
+            this.fileExtension.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileExtension.Location = new System.Drawing.Point(340, 55);
             this.fileExtension.MaxLength = 10;
             this.fileExtension.Name = "fileExtension";
-            this.fileExtension.Size = new System.Drawing.Size(228, 22);
+            this.fileExtension.Size = new System.Drawing.Size(183, 34);
             this.fileExtension.TabIndex = 0;
             this.fileExtension.Tag = "Enter a file extension:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 70);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 17);
+            this.label1.Size = new System.Drawing.Size(242, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter a file extension:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 128);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 17);
+            this.label2.Size = new System.Drawing.Size(261, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "String of text to search: ";
             // 
             // searchFile
             // 
-            this.searchFile.Location = new System.Drawing.Point(247, 123);
+            this.searchFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchFile.Location = new System.Drawing.Point(340, 123);
             this.searchFile.MaxLength = 50;
             this.searchFile.Name = "searchFile";
-            this.searchFile.Size = new System.Drawing.Size(238, 22);
+            this.searchFile.Size = new System.Drawing.Size(272, 34);
             this.searchFile.TabIndex = 3;
             this.searchFile.TextChanged += new System.EventHandler(this.searchFile_TextChanged);
             // 
             // searchPath
             // 
-            this.searchPath.Location = new System.Drawing.Point(247, 186);
+            this.searchPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchPath.Location = new System.Drawing.Point(240, 193);
             this.searchPath.MaxLength = 75;
             this.searchPath.Name = "searchPath";
-            this.searchPath.Size = new System.Drawing.Size(318, 22);
+            this.searchPath.Size = new System.Drawing.Size(372, 34);
             this.searchPath.TabIndex = 4;
             this.searchPath.Text = "C:\\";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 186);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(53, 198);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 17);
+            this.label3.Size = new System.Drawing.Size(177, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Path to search: ";
             // 
             // searchButton
             // 
             this.searchButton.AccessibleDescription = " ";
+            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.Location = new System.Drawing.Point(247, 257);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(108, 40);
@@ -111,6 +118,7 @@
             // 
             // clearButton
             // 
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.Location = new System.Drawing.Point(417, 257);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(106, 40);
@@ -124,11 +132,12 @@
             this.fileList.Location = new System.Drawing.Point(80, 392);
             this.fileList.MaximumSize = new System.Drawing.Size(4, 50);
             this.fileList.Name = "fileList";
-            this.fileList.Size = new System.Drawing.Size(0, 22);
+            this.fileList.Size = new System.Drawing.Size(2, 22);
             this.fileList.TabIndex = 9;
             // 
             // resultsBox1
             // 
+            this.resultsBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultsBox1.Location = new System.Drawing.Point(58, 322);
             this.resultsBox1.MinimumSize = new System.Drawing.Size(200, 200);
             this.resultsBox1.Multiline = true;
@@ -144,9 +153,10 @@
             // fileExtDesc
             // 
             this.fileExtDesc.AutoSize = true;
+            this.fileExtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileExtDesc.Location = new System.Drawing.Point(91, 87);
             this.fileExtDesc.Name = "fileExtDesc";
-            this.fileExtDesc.Size = new System.Drawing.Size(106, 17);
+            this.fileExtDesc.Size = new System.Drawing.Size(147, 25);
             this.fileExtDesc.TabIndex = 13;
             this.fileExtDesc.Text = "(.txt, .xml, .json)";
             // 
@@ -154,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 605);
+            this.ClientSize = new System.Drawing.Size(846, 582);
             this.Controls.Add(this.fileExtDesc);
             this.Controls.Add(this.resultsBox1);
             this.Controls.Add(this.fileList);

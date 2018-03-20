@@ -34,7 +34,7 @@ namespace FileFinder
                         string logMsg = ($"No Files Found Matching Path: { searchDirectory}" +
                              $" with file extension: {searchFileExt} ");
                         writeLog(logMsg);
-                        resultsBox1.Text = logMsg;
+                        resultsBox1.Text = logMsg; 
                     }
                     else
                     {
@@ -138,15 +138,6 @@ namespace FileFinder
             
         }
 
-        //I attached a button1(which doesn't appear on the form
-        //to the form event section "form close" to get this code generated
-        //It gets invoked when the user presses X to exit
-        //private void button1(object sender, FormClosedEventArgs e)
-        //{
-        //    string logMsg = ("File Finder Process Ended");
-        ////    writeLog(logMsg);
-       // }
-
         private void useerFileExt_SelectedIndexChanged(object sender, EventArgs e)
         {
         
@@ -159,14 +150,16 @@ namespace FileFinder
 
         private void searchFileForm_Load(object sender, EventArgs e)
         {
-
+            string logMsg = "FileFinder Process Started";
+            writeLog(logMsg);
         }
+        
         //I attached an event named onExit(which doesn't appear on the form
         //to the form event section "form close" to get this code generated
         //It gets invoked when the user presses X to exit
         private void onExit(object sender, FormClosedEventArgs e)
         {
-            string logMsg = ("File Finder Process Ended");
+            string logMsg = "File Finder Process Ended";
             writeLog(logMsg);
         }
     }
